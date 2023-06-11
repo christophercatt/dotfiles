@@ -88,7 +88,29 @@ function install_atuin() {
 
 }
 
+function install_blesh() {
+
+    if [ ! -f ~/.local/share/blesh/ble.sh ]; then
+
+        ECHO "Installing ble.sh..."
+
+        mkdir -p ~/.local/share/blesh
+
+        wget -O - https://github.com/akinomyoga/ble.sh/releases/download/nightly/ble-nightly.tar.xz | tar xJf -
+        
+        cp -Rf ble-nightly/* ~/.local/share/blesh/
+        rm -rf ble-nightly
+
+        echo "Finished installing ble.sh."
+
+    else
+        echo "'ble.sh' already installed. Skipping..."
+    fi
+
+}
+
 install_os_packages
 install_starship
 install_exa
 install_atuin
+install_blesh

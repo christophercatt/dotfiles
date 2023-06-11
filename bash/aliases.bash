@@ -71,6 +71,8 @@ alias historyld="atuin history list --format '{time} - {directory} - {command}'"
 
 # startup starship
 eval "$(starship init bash)"
+
+# startup ble.sh
 source ~/.local/share/blesh/ble.sh
 
 # startup atuin
