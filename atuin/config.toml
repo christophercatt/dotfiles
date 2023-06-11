@@ -1,0 +1,27 @@
+# ~/.config/atuin/config.toml
+
+db_path = "~/.local/share/atuin/history.db"
+
+key_path = "~/.local/share/atuin/.atuin-key"
+
+session_path = "~/.local/share/atuin/.atuin-session"
+
+dialect = "uk"
+
+auto_sync = false
+
+sync_address = ""
+
+update_check = true
+
+filter_mode = "host"
+
+style = "compact"
+
+inline_height = 10
+
+show_preview = true
+
+show_help = true
+
+exit_mode = "return-original"

@@ -1,0 +1,357 @@
+# ~/.config/starship.toml
+
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = true
+
+# General Configuration
+
+[shell]
+disabled = true
+bash_indicator = ""
+
+[memory_usage]
+symbol = "󰍛 "
+format = 'via $symbol [${ram}( \| ${swap})]($style) '
+threshold = 95
+disabled = false
+
+[cmd_duration]
+min_time = 10
+show_milliseconds = false
+disabled = false
+style = "bold italic red"
+
+[username]
+format = '[$user]($style) in '
+show_always = true
+disabled = true
+
+[character]
+format = "$symbol "
+success_symbol = '[❯](bold green)'
+error_symbol = '[❯](bold red)'
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+read_only = "󰌾"
+format = '[ $path]($style) '
+
+# Git Configuration
+
+[git_branch]
+symbol = " "
+always_show_remote = false
+ignore_branches = []
+
+[git_commit]
+commit_hash_length = 7
+only_detached = true
+tag_disabled = true
+
+[git_state]
+disabled = true
+
+[git_status]
+disabled = true
+
+# OS Configuration
+
+[os]
+disabled = true
+format = "$symbol "
+
+[os.symbols]
+Alpaquita = " "
+Alpine = " "
+Amazon = " "
+Android = " "
+Arch = " "
+Artix = " "
+CentOS = " "
+Debian = " "
+DragonFly = " "
+Emscripten = " "
+EndeavourOS = " "
+Fedora = " "
+FreeBSD = " "
+Garuda = "󰛓 "
+Gentoo = " "
+HardenedBSD = "󰞌 "
+Illumos = "󰈸 "
+Linux = " "
+Mabox = " "
+Macos = " "
+Manjaro = " "
+Mariner = " "
+MidnightBSD = " "
+Mint = " "
+NetBSD = " "
+NixOS = " "
+OpenBSD = "󰈺 "
+openSUSE = " "
+OracleLinux = "󰌷 "
+Pop = " "
+Raspbian = " "
+Redhat = " "
+RedHatEnterprise = " "
+Redox = "󰀘 "
+Solus = "󰠳 "
+SUSE = " "
+Ubuntu = " "
+Unknown = " "
+Windows = "󰍲 "
+
+# Dev Configuration
+
+[aws]
+symbol = "  "
+
+[c]
+symbol = " "
+detect_extensions = [ 'c', 'h' ]
+detect_files = []
+detect_folders = []
+
+[cmake]
+format = "via [$symbol]($style)"
+detect_files = [ 'CMakeLists.txt', 'CMakeCache.txt' ]
+detect_folders = []
+
+[container]
+symbol = ' '
+format = '[$symbol \[$name\]]($style) '
+
+[dart]
+symbol = " "
+format = "via [$symbol]($style)"
+detect_extensions = [ 'dart' ]
+detect_files = [ 'pubspec.yaml', 'pubspec.yml', 'pubspec.lock' ]
+detect_folders = [ '.dart_tool' ]
+
+[deno]
+format = "via [$symbol]($style)"
+detect_files = [ 'deno.json', 'deno.jsonc', 'mod.ts', 'mod.js', 'deps.ts', 'deps.js' ]
+detect_folders = []
+
+[docker_context]
+symbol = " "
+format = "via [$symbol$context]($style) "
+style = "blue bold"
+only_with_files = true
+detect_files = [ "docker-compose.yml", "docker-compose.yaml", "Dockerfile" ]
+detect_folders = []
+disabled = false
+
+[dotnet]
+symbol = '.NET '
+format = "[$symbol(🎯 $tfm )]($style)"
+detect_extensions = [ 'csproj', 'fsproj', 'xproj' ]
+detect_files = [ 'global.json', 'project.json', 'Directory.Build.props', 'Directory.Build.targets', 'Packages.props' ]
+detect_folders = []
+
+[golang]
+symbol = " "
+format = 'via [$symbol]($style)'
+detect_extensions = [ 'go' ]
+detect_files = [ 'go.mod', 'go.sum', 'go.work', 'glide.yaml', 'Gopkg.yml', 'Gopkg.lock', '.go-version' ]
+detect_folders = [ 'Godeps' ]
+
+[gradle]
+format = 'via [$symbol]($style)'
+detect_extensions = [ "gradle", "gradle.kts" ]
+detect_files = []
+detect_folders = [ 'gradle' ]
+
+[guix_shell]
+symbol = " "
+
+[helm]
+format = 'via [$symbol]($style)'
+detect_files = [ 'helmfile.yaml', 'Chart.yaml' ]
+detect_folders = []
+
+[java]
+symbol = " "
+format = 'via [$symbol]($style)'
+detect_extensions = [ 'java', 'class', 'gradle', 'jar', 'cljs', 'cljc' ]
+detect_files = [ 'pom.xml', 'build.gradle.kts', 'build.sbt', '.java-version', 'deps.edn', 'project.clj', 'build.boot', '.sdkmanrc' ]
+detect_folders = []
+
+[kotlin]
+format = 'via [$symbol]($style)'
+detect_extensions = [ 'kt', 'kts' ]
+detect_files = []
+detect_folders = []
+
+[kubernetes]
+symbol = '󱃾 '
+format = '[$symbol$context( \($namespace\))]($style) in '
+disabled = false
+
+[lua]
+symbol = " "
+format = 'via [$symbol]($style)'
+detect_extensions = [ 'lua' ]
+detect_files = [ '.lua-version' ]
+detect_folders = [ 'lua' ]
+
+[nodejs]
+symbol = " "
+format = 'via [$symbol]($style)'
+detect_extensions = [ 'js', 'mjs', 'cjs', 'ts', 'mts', 'cts' ]
+detect_files = [ "package.json", ".node-version" ]
+detect_folders = [ "node_modules" ]
+
+[package]
+symbol = "󰏗 "
+display_private = true
+
+[php]
+format = 'via [$symbol]($style)'
+detect_extensions = [ 'php' ]
+detect_files = [ 'composer.json', '.php-version' ]
+detect_folders = []
+
+[python]
+symbol = " "
+format = 'via [$symbol]($style)'
+pyenv_version_name = true
+pyenv_prefix = 'pyenv'
+python_binary = [ 'python', 'python3', 'python2' ]
+detect_extensions = [ 'py' ]
+detect_files = [ '.python-version', 'Pipfile', '__init__.py', 'pyproject.toml', 'requirements.txt', 'setup.py', 'tox.ini' ]
+detect_folders = []
+
+[rlang]
+symbol = "󰟔 "
+format = 'via [$symbol]($style)'
+detect_extensions = [ 'R', 'Rd', 'Rmd', 'Rproj', 'Rsx' ]
+detect_files = [ '.Rprofile' ]
+detect_folders = [ '.Rproj.user' ]
+
+[ruby]
+symbol = " "
+format = 'via [$symbol]($style)'
+detect_extensions = [ 'rb' ]
+detect_files = [ 'Gemfile', '.ruby-version' ]
+detect_folders = []
+detect_variables = [ 'RUBY_VERSION', 'RBENV_VERSION' ]
+
+[rust]
+symbol = " "
+format = 'via [$symbol]($style)'
+detect_extensions = [ 'rs' ]
+detect_files = [ 'Cargo.toml' ]
+detect_folders = []
+
+[scala]
+symbol = " "
+format = 'via [${symbol}(${version} )]($style)'
+detect_extensions = [ 'sbt', 'scala' ]
+detect_files = [ '.scalaenv', '.sbtenv', 'build.sbt' ]
+detect_folders = [ '.metals' ]
+
+# Disabled modules
+
+[hostname]
+disabled = true
+
+[buf]
+disabled = true
+
+[bun]
+disabled = true
+
+[cobol]
+disabled = true
+
+[conda]
+disabled = true
+
+[crystal]
+disabled = true
+
+[daml]
+disabled = true
+
+[elixir]
+disabled = true
+
+[elm]
+disabled = true
+
+[erlang]
+disabled = true
+
+[fennel]
+disabled = true
+
+[fossil_branch]
+disabled = true
+
+[haskell]
+disabled = true
+
+[haxe]
+disabled = true
+
+[hg_branch]
+disabled = true
+
+[julia]
+disabled = true
+
+[meson]
+disabled = true
+
+[nim]
+disabled = true
+
+[nix_shell]
+disabled = true
+
+[ocaml]
+disabled = true
+
+[opa]
+disabled = true
+
+[perl]
+disabled = true
+
+[pijul_channel]
+disabled = true
+
+[pulumi]
+disabled = true
+
+[purescript]
+disabled = true
+
+[raku]
+disabled = true
+
+[red]
+disabled = true
+
+[solidity]
+disabled = true
+
+[spack]
+disabled = true
+
+[swift]
+disabled = true
+
+[vagrant]
+disabled = true
+
+[vlang]
+disabled = true
+
+[zig]
+disabled = true
