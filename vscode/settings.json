@@ -1,6 +1,0 @@
-{
-  "json.maxItemsComputed": 500000,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSave": true,
-  "editor.fontFamily": "'FiraCode Nerd Font',Consolas, 'Courier New', monospace"
-}

@@ -1,0 +1,199 @@
+{
+  // Open json editor for settings
+  "workbench.settings.editor": "json",
+
+  // Theme
+  "workbench.colorTheme": "Aura Dark",
+  "workbench.iconTheme": "moxer-icons",
+
+  // Change font
+  "editor.fontFamily": "Geist Mono",
+  "scm.inputFontFamily": "Geist Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "chat.editor.fontFamily": "Geist Mono",
+  "debug.console.fontFamily": "Geist Mono",
+  "editor.codeLensFontFamily": "Geist Mono",
+  "notebook.output.fontFamily": "Geist Mono",
+  "markdown.preview.fontFamily": "Geist Mono",
+  "editor.inlayHints.fontFamily": "Geist Mono",
+
+  // Font size
+  "editor.fontSize": 14,
+  "terminal.integrated.fontSize": 14,
+
+  // UI
+  "editor.minimap.enabled": false,
+  "window.commandCenter": false,
+  "editor.scrollbar.vertical": "auto",
+  "window.titleBarStyle": "custom",
+  "editor.scrollbar.horizontal": "auto",
+  "workbench.tree.renderIndentGuides": "always",
+  "workbench.tree.indent": 20,
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.enablePreview": false,
+
+  // Terminal
+  "terminal.integrated.gpuAcceleration": "off",
+  "terminal.integrated.scrollback": 20000,
+  "terminal.integrated.copyOnSelection": true,
+  "terminal.integrated.smoothScrolling": true,
+
+  // File associations
+  "files.associations": {
+    ".env*": "dotenv",
+    "*.css": "tailwindcss"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // Path intellisense
+  "typescript.suggest.paths": false,
+  "javascript.suggest.paths": false,
+
+  // APC
+  "apc.activityBar": {
+    "position": "bottom",
+    "hideSettings": true,
+    "size": 28
+  },
+  "apc.electron": {
+    "titleBarStyle": "hiddenInset",
+    "trafficLightPosition": {
+      "x": 12,
+      "y": 10
+    }
+  },
+  "apc.font.family": "Geist Mono",
+  "apc.monospace.font.family": "Geist Mono",
+  "apc.statusBar": {
+    "position": "editor-bottom",
+    "height": 28,
+    "fontSize": 12
+  },
+
+  // Custom css
+  "apc.stylesheet": {
+    ".sidebar > .composite": "height: 12px !important",
+    ".title-label": "display: none !important",
+    ".title-actions": "display: none !important",
+    ".tabs-and-actions-container > .editor-actions": "display: none !important",
+    ".titlebar-center": "display: none !important",
+    ".titlebar-right": "display: none !important",
+    ".inline-tabs-placeholder": "display: none !important",
+    ".split-view-view .visible": "background-color: #110f17 !important"
+  },
+
+  // Aura theme customisation
+  "workbench.colorCustomizations": {
+    "[Aura Dark]": {
+      "editor.background": "#110f17",
+      "terminal.background": "#110f17",
+      "activityBar.background": "#110f17",
+      "statusBar.background": "#110f17",
+      "editorGroupHeader.tabsBackground": "#110f17",
+      "tab.inactiveBackground": "#110f17"
+    }
+  },
+
+  // Dotenv
+  "editor.tokenColorCustomizations": {
+    "textMateRules": []
+  },
+  "dotenv.enableAutocloaking": false,
+  "dotenv.enableSecretpeeking": true,
+
+  // Tailwind fold
+  "tailwind-fold.autoFold": false,
+  "tailwind-fold.foldStyle": "QUOTES",
+  "tailwind-fold.showTailwindImage": false,
+  "tailwind-fold.unfoldedTextOpacity": 0.5,
+
+  // Template strings converter
+  "template-string-converter.enabled": true,
+  "template-string-converter.quoteType": "both",
+  "template-string-converter.convertOutermostQuotes": true,
+  "template-string-converter.autoRemoveTemplateString": true,
+  "template-string-converter.addBracketsToProps": true,
+
+  // Toggle excluded files
+  "files.exclude": {
+    "**/.git": false,
+    "**/.svn": false,
+    "**/.hg": false,
+    "**/CVS": false,
+    "**/.DS_Store": false,
+    "**/Thumbs.db": false,
+    "**/node_modules": false,
+    "**/.next": false,
+    "**/.husky": false,
+    "**/drizzle": false,
+    "**/dist": false,
+    "**/.todo.md": false,
+    "**/.vscode": false,
+    "**/.eslintrc.cjs": false,
+    "**/.editorconfig": false,
+    "**/.gitignore": false,
+    "**/.lintstagedrc.mjs": false,
+    "**/.markdownlint.json": false,
+    "**/.markdownlintignore": false,
+    "**/.prettierignore": false,
+    "**/bun.lockb": false,
+    "**/cspell.json": false,
+    "**/package-lock.json": false,
+    "**/pnpm-lock.yaml": false,
+    "**/next-env.d.ts": false,
+    "**/postcss.config.cjs": false,
+    "**/prettier.config.js": false,
+    "**/README.md": false,
+    "**/next.config.js": false,
+    "**/tailwind.config.ts": false,
+    "**/drizzle.config.ts": false,
+    "**/migrate.ts": false,
+    "**/.env.example": false
+  },
+
+  // Misc
+  "workbench.startupEditor": "none",
+  "explorer.compactFolders": false,
+  "editor.tabSize": 2,
+  "editor.linkedEditing": true,
+  "breadcrumbs.filePath": "off",
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "window.zoomLevel": 0.2,
+  "json.maxItemsComputed": 500000,
+  "editor.formatOnSave": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "debug.autoExpandLazyVariables": true,
+
+  // cSpell
+  "cSpell.language": "en-GB",
+  "cSpell.minWordLength": 4,
+  "cSpell.allowCompoundWords": true,
+  "cSpell.userWords": [
+    "clsx",
+    "color",
+    "colorization",
+    "ddbd",
+    "dotfiles",
+    "esbenp",
+    "geist",
+    "hljs",
+    "lintstagedrc",
+    "lockb",
+    "moxer",
+    "nextjs",
+    "oidc",
+    "rehype",
+    "sigv",
+    "soapenv"
+  ]
+}

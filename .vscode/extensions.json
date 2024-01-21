@@ -1,0 +1,26 @@
+{
+  "recommendations": [
+    "amodio.toggle-excluded-files",
+    "bierner.github-markdown-preview",
+    "bradlc.vscode-tailwindcss",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "daltonmenezes.aura-theme",
+    "dbaeumer.vscode-eslint",
+    "dotenv.dotenv-vscode",
+    "drcika.apc-extension",
+    "eamodio.gitlens",
+    "equinusocio.moxer-icons",
+    "esbenp.prettier-vscode",
+    "gruntfuggly.todo-tree",
+    "meganrogge.template-string-converter",
+    "mohsen1.prettify-json",
+    "ms-azuretools.vscode-docker",
+    "ms-vscode.vscode-typescript-next",
+    "stivo.tailwind-fold",
+    "streetsidesoftware.code-spell-checker",
+    "usernamehw.errorlens",
+    "wix.vscode-import-cost",
+    "yoavbls.pretty-ts-errors"
+  ]
+}
