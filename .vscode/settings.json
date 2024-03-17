@@ -1,37 +1,175 @@
 {
-  // Open json editor for settings
+  // Meta
+  "workbench.startupEditor": "none",
+  "editor.accessibilitySupport": "off",
   "workbench.settings.editor": "json",
+  "workbench.editor.enablePreview": false,
+  "json.maxItemsComputed": 500000,
+  "debug.autoExpandLazyVariables": true,
+  "security.workspace.trust.untrustedFiles": "open",
 
   // Theme
-  "workbench.colorTheme": "Aura Dark",
-  "workbench.iconTheme": "moxer-icons",
+  "workbench.colorTheme": "Default Dark Modern",
+  "workbench.iconTheme": "vs-seti",
+  "workbench.colorCustomizations": {
+    "focusBorder": "#101010"
+  },
+  "editor.roundedSelection": false,
+  "editor.fontLigatures": true,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "String, Symbols, Inherited Class",
+        "scope": [
+          "string",
+          "constant.other.symbol",
+          "constant.other.key",
+          "meta.group.braces.curly constant.other.object.key.js string.unquoted.label.js"
+        ],
+        "settings": {
+          "foreground": "#A0A0A0"
+        }
+      },
+      {
+        "name": "CSS ID's",
+        "scope": [
+          "source.sass keyword.control",
+          "meta.attribute-selector.scss"
+        ],
+        "settings": {
+          "foreground": "#A0A0A0"
+        }
+      },
+      {
+        "name": "Inserted",
+        "scope": ["markup.inserted"],
+        "settings": {
+          "foreground": "#FFFFFF"
+        }
+      }
+    ]
+  },
+  "apc.activityBar": {
+    "size": 36
+  },
+  "apc.monospace.font.family": "Geist Mono",
+  "apc.statusBar": {
+    "position": "bottom",
+    "height": 26,
+    "fontSize": 12
+  },
+  "apc.listRow": {
+    "height": 20,
+    "fontSize": 12
+  },
+  "apc.stylesheet": {
+    ".monaco-workbench .part.sidebar .title-actions .actions-container": "justify-content: flex-start; padding-left: 6px !important",
+    ".monaco-list-rows": "padding-left: 12px !important",
+    ".part.sidebar .search-view .monaco-count-badge": "margin-right: 12px !important",
+    ".part.sidebar .search-view .monaco-toolbar": "margin-right: 12px !important",
+    ".scm-viewlet .monaco-list-rows": "padding-left: 0px !important; height: 100% !important",
+    ".scm-viewlet .monaco-list-rows .monaco-list-row:nth-child(2)": "margin-top: 10px !important",
+    ".scm-viewlet .monaco-list-rows .monaco-list-row:not(:nth-child(-n + 2))": "margin-top: 15px !important",
+    ".sidebar": "height: 100% !important",
+    ".title-label": "display: none !important",
+    ".inline-tabs-placeholder": "display: none !important"
+  },
 
-  // Change font
-  "editor.fontFamily": "Geist Mono",
-  "scm.inputFontFamily": "Geist Mono",
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "chat.editor.fontFamily": "Geist Mono",
-  "debug.console.fontFamily": "Geist Mono",
-  "editor.codeLensFontFamily": "Geist Mono",
-  "notebook.output.fontFamily": "Geist Mono",
-  "markdown.preview.fontFamily": "Geist Mono",
-  "editor.inlayHints.fontFamily": "Geist Mono",
-
-  // Font size
-  "editor.fontSize": 14,
-  "terminal.integrated.fontSize": 14,
+  // Text Editing
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.linkedEditing": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "editor.unicodeHighlight.nonBasicASCII": false,
+  "editor.tabSize": 2,
+  "files.trimTrailingWhitespace": true,
+  "[markdown]": {
+    "files.trimTrailingWhitespace": false
+  },
 
   // UI
-  "editor.minimap.enabled": false,
-  "window.commandCenter": false,
+  "editor.fontFamily": "Geist Mono",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "apc.font.family": "Geist Mono",
+  "editor.fontSize": 12,
+  "editor.lineHeight": 1.5,
   "editor.scrollbar.vertical": "auto",
-  "window.titleBarStyle": "custom",
   "editor.scrollbar.horizontal": "auto",
   "workbench.tree.renderIndentGuides": "always",
-  "workbench.tree.indent": 20,
+  "workbench.tree.indent": 14,
   "editor.smoothScrolling": true,
   "workbench.list.smoothScrolling": true,
-  "workbench.editor.enablePreview": false,
+  "explorer.compactFolders": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+
+  // Editor
+  "editor.stickyScroll.enabled": true,
+  "gitlens.mode.active": "zen",
+  "editor.wordWrap": "on",
+
+  // Language
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+
+  // Eslint
+  "eslint.options": {
+    "extensions": [".js", ".jsx", ".md", ".mdx", ".ts", ".tsx"]
+  },
+  "eslint.validate": [
+    "md",
+    "mdx",
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+
+  // Tailwind
+  "tailwind-fold.autoFold": false,
+  "tailwind-fold.foldStyle": "QUOTES",
+  "tailwind-fold.showTailwindImage": false,
+  "tailwind-fold.unfoldedTextOpacity": 0.5,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cn\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    ["cx\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+
+  // Template strings converter
+  "template-string-converter.enabled": true,
+  "template-string-converter.quoteType": "both",
+  "template-string-converter.convertOutermostQuotes": true,
+  "template-string-converter.autoRemoveTemplateString": true,
+  "template-string-converter.addBracketsToProps": true,
+
+  // Cursor
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+
+  // Window
+  "window.title": "${rootName}${separator}${activeEditorShort}",
+
+  // Topbar
+  "workbench.editor.showTabs": "multiple",
+  "breadcrumbs.enabled": false,
+  "window.commandCenter": false,
+  "workbench.layoutControl.enabled": false,
+  "workbench.editor.editorActionsLocation": "hidden",
+
+  // Minimap
+  "editor.minimap.renderCharacters": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.minimap.autohide": true,
+
+  // Git
+  "git.openRepositoryInParentFolders": "always",
+  "git.autofetch": true,
+  "git.confirmNoVerifyCommit": false,
+  "git.confirmSync": true,
+  "git.ignoreMissingGitWarning": false,
 
   // Terminal
   "terminal.integrated.gpuAcceleration": "off",
@@ -41,7 +179,6 @@
 
   // File associations
   "files.associations": {
-    ".env*": "dotenv",
     "*.css": "tailwindcss"
   },
   "[jsonc]": {
@@ -52,148 +189,33 @@
   "typescript.suggest.paths": false,
   "javascript.suggest.paths": false,
 
-  // APC
-  "apc.activityBar": {
-    "position": "bottom",
-    "hideSettings": true,
-    "size": 28
-  },
-  "apc.electron": {
-    "titleBarStyle": "hiddenInset",
-    "trafficLightPosition": {
-      "x": 12,
-      "y": 10
-    }
-  },
-  "apc.font.family": "Geist Mono",
-  "apc.monospace.font.family": "Geist Mono",
-  "apc.statusBar": {
-    "position": "editor-bottom",
-    "height": 28,
-    "fontSize": 12
-  },
-
-  // Custom css
-  "apc.stylesheet": {
-    ".sidebar > .composite": "height: 12px !important",
-    ".title-label": "display: none !important",
-    ".title-actions": "display: none !important",
-    ".tabs-and-actions-container > .editor-actions": "display: none !important",
-    ".titlebar-center": "display: none !important",
-    ".titlebar-right": "display: none !important",
-    ".inline-tabs-placeholder": "display: none !important",
-    ".split-view-view .visible": "background-color: #110f17 !important"
-  },
-
-  // Aura theme customisation
-  "workbench.colorCustomizations": {
-    "[Aura Dark]": {
-      "editor.background": "#110f17",
-      "terminal.background": "#110f17",
-      "activityBar.background": "#110f17",
-      "statusBar.background": "#110f17",
-      "editorGroupHeader.tabsBackground": "#110f17",
-      "tab.inactiveBackground": "#110f17"
-    }
-  },
-
-  // Dotenv
-  "editor.tokenColorCustomizations": {
-    "textMateRules": []
-  },
-  "dotenv.enableAutocloaking": false,
-  "dotenv.enableSecretpeeking": true,
-
-  // Tailwind fold
-  "tailwind-fold.autoFold": false,
-  "tailwind-fold.foldStyle": "QUOTES",
-  "tailwind-fold.showTailwindImage": false,
-  "tailwind-fold.unfoldedTextOpacity": 0.5,
-
-  // Template strings converter
-  "template-string-converter.enabled": true,
-  "template-string-converter.quoteType": "both",
-  "template-string-converter.convertOutermostQuotes": true,
-  "template-string-converter.autoRemoveTemplateString": true,
-  "template-string-converter.addBracketsToProps": true,
-
   // Toggle excluded files
   "files.exclude": {
-    "**/.git": false,
-    "**/.svn": false,
-    "**/.hg": false,
-    "**/CVS": false,
-    "**/.DS_Store": false,
-    "**/Thumbs.db": false,
-    "**/node_modules": false,
-    "**/.next": false,
-    "**/.husky": false,
-    "**/drizzle": false,
-    "**/dist": false,
-    "**/.todo.md": false,
-    "**/.vscode": false,
-    "**/.eslintrc.cjs": false,
-    "**/.editorconfig": false,
-    "**/.gitignore": false,
-    "**/.lintstagedrc.mjs": false,
-    "**/.markdownlint.json": false,
-    "**/.markdownlintignore": false,
-    "**/.prettierignore": false,
-    "**/bun.lockb": false,
-    "**/cspell.json": false,
-    "**/package-lock.json": false,
-    "**/pnpm-lock.yaml": false,
-    "**/next-env.d.ts": false,
-    "**/postcss.config.cjs": false,
-    "**/prettier.config.js": false,
-    "**/README.md": false,
-    "**/next.config.js": false,
-    "**/tailwind.config.ts": false,
-    "**/drizzle.config.ts": false,
-    "**/migrate.ts": false,
-    "**/.env.example": false
-  },
-
-  // Misc
-  "workbench.startupEditor": "none",
-  "explorer.compactFolders": false,
-  "editor.tabSize": 2,
-  "editor.linkedEditing": true,
-  "breadcrumbs.filePath": "off",
-  "files.trimTrailingWhitespace": true,
-  "[markdown]": {
-    "files.trimTrailingWhitespace": false
-  },
-  "editor.bracketPairColorization.enabled": true,
-  "editor.guides.bracketPairs": true,
-  "window.zoomLevel": 0.2,
-  "json.maxItemsComputed": 500000,
-  "editor.formatOnSave": true,
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
-  "debug.autoExpandLazyVariables": true,
-
-  // cSpell
-  "cSpell.language": "en-GB",
-  "cSpell.minWordLength": 4,
-  "cSpell.allowCompoundWords": true,
-  "cSpell.userWords": [
-    "clsx",
-    "color",
-    "colorization",
-    "ddbd",
-    "dotfiles",
-    "esbenp",
-    "geist",
-    "hljs",
-    "lintstagedrc",
-    "lockb",
-    "moxer",
-    "nextjs",
-    "oidc",
-    "rehype",
-    "sigv",
-    "soapenv"
-  ]
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/drizzle": true,
+    "**/dist": true,
+    "**/.todo.md": true,
+    "**/.gitignore": true,
+    "**/.markdownlint.json": true,
+    "**/.markdownlintignore": true,
+    "**/.prettierignore": true,
+    "**/bun.lockb": true,
+    "**/cspell.json": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/next-env.d.ts": true,
+    "**/postcss.config.cjs": true,
+    "**/README.md": true,
+    "**/drizzle.config.ts": true,
+    "**/migrate.ts": true,
+    "**/.env.example": true,
+    "**/tsconfig.tsbuildinfo": true
+  }
 }
