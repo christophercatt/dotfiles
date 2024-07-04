@@ -9,8 +9,8 @@
   "security.workspace.trust.untrustedFiles": "open",
 
   // Theme
-  "workbench.colorTheme": "Default Dark Modern",
-  "workbench.iconTheme": "vs-seti",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.iconTheme": "quill-icons-minimal",
   "workbench.colorCustomizations": {
     "focusBorder": "#101010"
   },
@@ -50,7 +50,9 @@
     ]
   },
   "apc.activityBar": {
-    "size": 36
+    "size": 48,
+    "itemSize": 36,
+    "itemMargin": 10
   },
   "apc.monospace.font.family": "Geist Mono",
   "apc.statusBar": {
@@ -59,20 +61,101 @@
     "fontSize": 12
   },
   "apc.listRow": {
-    "height": 20,
+    "height": 24,
     "fontSize": 12
   },
+  "apc.header": {
+    "height": 28
+  },
   "apc.stylesheet": {
-    ".monaco-workbench .part.sidebar .title-actions .actions-container": "justify-content: flex-start; padding-left: 6px !important",
-    ".monaco-list-rows": "padding-left: 12px !important",
-    ".part.sidebar .search-view .monaco-count-badge": "margin-right: 12px !important",
-    ".part.sidebar .search-view .monaco-toolbar": "margin-right: 12px !important",
-    ".scm-viewlet .monaco-list-rows": "padding-left: 0px !important; height: 100% !important",
-    ".scm-viewlet .monaco-list-rows .monaco-list-row:nth-child(2)": "margin-top: 10px !important",
-    ".scm-viewlet .monaco-list-rows .monaco-list-row:not(:nth-child(-n + 2))": "margin-top: 15px !important",
+    // ".monaco-workbench .part.sidebar .title-actions .actions-container": "justify-content: flex-start; padding-left: 6px !important",
+    // ".monaco-list-rows": "padding-left: 12px !important",
+    // ".part.sidebar .search-view .monaco-count-badge": "margin-right: 12px !important",
+    // ".part.sidebar .search-view .monaco-toolbar": "margin-right: 12px !important",
+    // ".scm-viewlet .monaco-list-rows": "padding-left: 0px !important; height: 100% !important",
+    // ".scm-viewlet .monaco-list-rows .monaco-list-row:nth-child(2)": "margin-top: 10px !important",
+    // ".scm-viewlet .monaco-list-rows .monaco-list-row:not(:nth-child(-n + 2))": "margin-top: 15px !important",
+    // ".tabs-container": "display: none !important",
+
+    // file tabs
+
+    ".tabs-container": "gap: 2px !important",
+    ".tabs-container > .tab": "border-radius: 5px 5px 0 0 !important",
+    ".tabs-container > .tab a": "font-size: 11px !important",
+    ".tabs-container > .tab:hover": "background-color: rgba(50, 48, 47, 0.4) !important",
+    ".tabs-container > .tab.active:hover": "background-color: rgba(50, 48, 47, 1) !important",
+    ".tabs-container > .tab > .tab-actions li:hover a": "background-color: rgba(50, 48, 47, 1) !important",
+    ".tabs-container > .tab.active > .tab-actions li:hover a": "background-color: rgba(30, 32, 33, 0.4) !important",
+
+    // activity bar
+
+    ".actions-container > .action-item > .active-item-indicator": "display: none !important",
+    ".content > div > .monaco-action-bar": "margin-bottom: 10px !important",
+    ".content .actions-container > li > a": "border-radius: 7px !important",
+    ".content .actions-container > li:hover > a": "background-color: rgba(50, 48, 47, 0.5) !important",
+    ".content .actions-container > li.checked > a": "background-color: rgba(50, 48, 47, 1) !important",
+    ".content .actions-container > li > .badge > .badge-content": "font-size: 0px !important; bottom: 0px !important; transform: scale(0.5) translate(-50%, 25%) !important",
+
+    // file explorer
+
+    ".explorer-folders-view .monaco-list-rows .monaco-list-row div[class*='monaco-decoration-iconBadge--9ieymw']::before": "color: #7c6f64 !important",
+    ".explorer-folders-view .monaco-list-rows .monaco-list-row .file-icon::after": "transform: translateX(-25%) !important",
+    ".explorer-folders-view .monaco-list-rows": "margin: 0 10px 0 10px !important",
+    ".explorer-folders-view .monaco-list-rows .monaco-list-row": "border-radius: 4px !important; width: calc(100% - 20px) !important",
+    ".explorer-folders-view .monaco-list-rows .selected": "outline: none !important",
+    ".monaco-workbench .part.sidebar .title-actions": "padding: 0 !important",
+    ".monaco-workbench .part.sidebar .title-actions .actions-container": "display: flex !important; width: calc(100% - 20px) !important; justify-content: space-between !important",
+    ".monaco-workbench .part.sidebar .title-actions .actions-container .action-item .action-label": "padding: 5px !important",
+    ".monaco-workbench .part.sidebar .title-actions .actions-container .action-item .action-label:hover": "background-color: rgba(50, 48, 47, 0.5) !important",
+
+    // scm explorer
+
+    ".scm-viewlet .monaco-list-rows .monaco-list-row": "border-radius: 4px !important; width: calc(100% - 20px) !important; transform: translateY(-70px) !important",
+    ".scm-viewlet .monaco-list-rows .selected": "outline: none !important",
+    ".scm-viewlet .monaco-list-rows": "margin: 0 10px 0 10px !important",
+    ".scm-viewlet .monaco-list-rows .force-no-hover": "display: none !important",
+    ".scm-viewlet .monaco-list-rows .monaco-list-row .monaco-count-badge": "font-size: 9px !important; padding: 3px !important; background-color: rgba(69, 133, 136, 1) !important; color: rgb(232, 220, 183) !important",
+    ".scm-viewlet .monaco-list-rows .monaco-list-row .monaco-tl-indent": "display: none !important",
+    ".scm-viewlet .monaco-list-rows .monaco-list-row .monaco-tl-twistie:not(.force-twistie)": "display: none !important",
+    ".scm-viewlet .monaco-list-rows .monaco-list-row .force-twistie": "padding-left: 0px !important",
+    ".scm-viewlet .monaco-list-rows .monaco-list-row .monaco-tl-contents": "padding-left: 4px !important",
+
+    ".scm-viewlet .monaco-list-rows .monaco-list-row:not(.force-twistie) .monaco-tl-contents": "font-size: 11px !important; font-style: italic !important",
+    ".scm-viewlet .monaco-list-rows .monaco-list-row:has(.force-twistie) .monaco-tl-contents": "font-size: 13px !important; font-style: normal !important",
+
+    // scrollbar
+
+    ".vertical .scrollbar": "width: 3px !important",
+    ".vertical .scrollbar-track": "width: 3px !important",
+    ".vertical .scrollbar-thumb": "width: 3px !important",
+    ".horizontal .scrollbar": "height: 3px !important",
+    ".horizontal .scrollbar-track": "height: 3px !important",
+    ".horizontal .scrollbar-thumb": "height: 3px !important",
+
+    // statusbar
+
+    ".statusbar": "color: rgba(232, 220, 183, 0.5) !important",
+    ".statusbar a": "font-size: 9px !important",
+    ".statusbar a:hover": "background-color: rgba(50, 48, 47, 0.5) !important",
+
+    // basepanel
+
+    ".basepanel .composite-bar-container .action-item": "border-radius: 7px !important; padding: 4px !important; line-height: 0.7em !important",
+    ".basepanel .composite-bar-container .action-item .action-label": "font-size: 9px !important",
+    ".basepanel .composite-bar-container .action-item:hover": "background-color: rgba(50, 48, 47, 0.5) !important",
+    ".basepanel .composite-bar-container .actions-container .checked": "background-color: rgba(50, 48, 47, 1) !important",
+    // ".basepanel .title-actions .action-item .action-label": "font-size: 9px !important",
+
+    // misc
+
     ".sidebar": "height: 100% !important",
     ".title-label": "display: none !important",
-    ".inline-tabs-placeholder": "display: none !important"
+    ".inline-tabs-placeholder": "display: none !important",
+
+    // borders
+
+    ".part, .part > .composite": "border-color: rgba(50, 48, 47, 0.6) !important",
+    ".tabs-border-bottom::after, .statusbar::after": "background-color: rgba(50, 48, 47, 0.6) !important"
   },
 
   // Text Editing
@@ -191,31 +274,42 @@
 
   // Toggle excluded files
   "files.exclude": {
-    "**/.git": true,
-    "**/.svn": true,
-    "**/.hg": true,
-    "**/CVS": true,
-    "**/.DS_Store": true,
-    "**/Thumbs.db": true,
-    "**/node_modules": true,
-    "**/.next": true,
-    "**/drizzle": true,
-    "**/dist": true,
-    "**/.todo.md": true,
-    "**/.gitignore": true,
-    "**/.markdownlint.json": true,
-    "**/.markdownlintignore": true,
-    "**/.prettierignore": true,
-    "**/bun.lockb": true,
-    "**/cspell.json": true,
-    "**/package-lock.json": true,
-    "**/pnpm-lock.yaml": true,
-    "**/next-env.d.ts": true,
-    "**/postcss.config.cjs": true,
-    "**/README.md": true,
-    "**/drizzle.config.ts": true,
-    "**/migrate.ts": true,
-    "**/.env.example": true,
-    "**/tsconfig.tsbuildinfo": true
-  }
+    "**/.git": false,
+    "**/.svn": false,
+    "**/.hg": false,
+    "**/CVS": false,
+    "**/.DS_Store": false,
+    "**/Thumbs.db": false,
+    "**/node_modules": false,
+    "**/.next": false,
+    "**/drizzle": false,
+    "**/dist": false,
+    "**/.todo.md": false,
+    "**/.gitignore": false,
+    "**/.markdownlint.json": false,
+    "**/.markdownlintignore": false,
+    "**/.prettierignore": false,
+    "**/bun.lockb": false,
+    "**/cspell.json": false,
+    "**/package-lock.json": false,
+    "**/pnpm-lock.yaml": false,
+    "**/next-env.d.ts": false,
+    "**/postcss.config.cjs": false,
+    "**/README.md": false,
+    "**/drizzle.config.ts": false,
+    "**/migrate.ts": false,
+    "**/.env.example": false,
+    "**/tsconfig.tsbuildinfo": false
+  },
+  "supermaven.enable": {
+    "*": true
+  },
+  "workbench.sideBar.location": "right",
+  "find-it-faster.general.killTerminalAfterUse": true,
+  "find-it-faster.general.clearTerminalAfterUse": true,
+  "find-it-faster.general.restoreFocusTerminal": true,
+  "find-it-faster.general.hideTerminalAfterFail": true,
+  "find-it-faster.general.hideTerminalAfterSuccess": true,
+  "prettier.configPath": "",
+  "prettier.useEditorConfig": false
 }
